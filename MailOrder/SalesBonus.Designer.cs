@@ -104,9 +104,9 @@
             // 
             // LanguageBox
             // 
-            resources.ApplyResources(this.LanguageBox, "LanguageBox");
             this.LanguageBox.Controls.Add(this.FrenchButton);
             this.LanguageBox.Controls.Add(this.EnglishButton);
+            resources.ApplyResources(this.LanguageBox, "LanguageBox");
             this.LanguageBox.Name = "LanguageBox";
             this.LanguageBox.TabStop = false;
             // 
@@ -115,7 +115,7 @@
             resources.ApplyResources(this.FrenchButton, "FrenchButton");
             this.FrenchButton.Name = "FrenchButton";
             this.FrenchButton.UseVisualStyleBackColor = true;
-            this.FrenchButton.CheckedChanged += new System.EventHandler(this.FrenchButton_CheckedChanged);
+            this.FrenchButton.Click += new System.EventHandler(this.FrenchButton_Click);
             // 
             // EnglishButton
             // 
@@ -124,10 +124,11 @@
             this.EnglishButton.Name = "EnglishButton";
             this.EnglishButton.TabStop = true;
             this.EnglishButton.UseVisualStyleBackColor = true;
-            this.EnglishButton.CheckedChanged += new System.EventHandler(this.EnglishButton_CheckedChanged);
+            this.EnglishButton.Click += new System.EventHandler(this.EnglishButton_Click);
             // 
             // Logo
             // 
+            this.Logo.Image = global::MailOrder.Properties.Resources.minmailorder_4;
             resources.ApplyResources(this.Logo, "Logo");
             this.Logo.Name = "Logo";
             this.Logo.TabStop = false;
@@ -155,8 +156,8 @@
             // 
             // SalesBonus
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CalculateButton);

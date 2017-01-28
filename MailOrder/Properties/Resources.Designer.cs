@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MailOrder.Properties
-{
-
-
+namespace MailOrder.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,240 @@ namespace MailOrder.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MailOrder.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculate.
+        /// </summary>
+        internal static string E_Calculate {
+            get {
+                return ResourceManager.GetString("E_Calculate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Employee Id.
+        /// </summary>
+        internal static string E_EmployeeId {
+            get {
+                return ResourceManager.GetString("E_EmployeeId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Employee Name.
+        /// </summary>
+        internal static string E_EmployeeName {
+            get {
+                return ResourceManager.GetString("E_EmployeeName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        internal static string E_English {
+            get {
+                return ResourceManager.GetString("E_English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Français.
+        /// </summary>
+        internal static string E_French {
+            get {
+                return ResourceManager.GetString("E_French", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string E_Language {
+            get {
+                return ResourceManager.GetString("E_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        internal static string E_Next {
+            get {
+                return ResourceManager.GetString("E_Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print.
+        /// </summary>
+        internal static string E_Print {
+            get {
+                return ResourceManager.GetString("E_Print", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales Bonus.
+        /// </summary>
+        internal static string E_SalesBonus {
+            get {
+                return ResourceManager.GetString("E_SalesBonus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Hours Worked.
+        /// </summary>
+        internal static string E_TotalHoursWorked {
+            get {
+                return ResourceManager.GetString("E_TotalHoursWorked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Monthly Sale.
+        /// </summary>
+        internal static string E_TotalMonthlySales {
+            get {
+                return ResourceManager.GetString("E_TotalMonthlySales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculer.
+        /// </summary>
+        internal static string F_Calculate {
+            get {
+                return ResourceManager.GetString("F_Calculate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id de l’employé.
+        /// </summary>
+        internal static string F_EmployeeId {
+            get {
+                return ResourceManager.GetString("F_EmployeeId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nom de l’employé.
+        /// </summary>
+        internal static string F_EmployeeName {
+            get {
+                return ResourceManager.GetString("F_EmployeeName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anglais.
+        /// </summary>
+        internal static string F_English {
+            get {
+                return ResourceManager.GetString("F_English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Langue.
+        /// </summary>
+        internal static string F_Language {
+            get {
+                return ResourceManager.GetString("F_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prochaine.
+        /// </summary>
+        internal static string F_Next {
+            get {
+                return ResourceManager.GetString("F_Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Imprimer.
+        /// </summary>
+        internal static string F_Print {
+            get {
+                return ResourceManager.GetString("F_Print", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prime à la vente.
+        /// </summary>
+        internal static string F_SalesBonus {
+            get {
+                return ResourceManager.GetString("F_SalesBonus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total d’heures travaillées.
+        /// </summary>
+        internal static string F_TotalHoursWorked {
+            get {
+                return ResourceManager.GetString("F_TotalHoursWorked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total de la vente mensuels.
+        /// </summary>
+        internal static string F_TotalMonthlySales {
+            get {
+                return ResourceManager.GetString("F_TotalMonthlySales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minmailorder_4 {
+            get {
+                object obj = ResourceManager.GetObject("minmailorder_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

@@ -34,18 +34,27 @@ namespace MailOrder
         //This method will calculate the total bonus that the employee makes 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            int totalHourWorked = int.Parse(TotalHoursWorkedText.Text);
-            double saleBonus = 0.0;
-            double totalBonusAmount = 0.0;
-            double percentageOfHoursWorked = 0.0;
+            double totalHourWorked;
+            double.TryParse(TotalHoursWorkedText.Text, out totalHourWorked);
+            double saleBonus;
+            double totalBonusAmount;
+            double percentageOfHoursWorked;
+            double totalMonthlySales;
+            double.TryParse(TotalMonthlySalesText.Text, out totalMonthlySales);
+
+            if (totalHourWorked < 0 || totalHourWorked > 160) {
+                MessageBox.Show("Total Hours Worked must be 0-160");
+            }
+
+            if (totalMonthlySales < 0) {
+                MessageBox.Show("Total Monthly Sales must be > 0");
+            }
 
             if (totalHourWorked >= 0 && totalHourWorked <= 160) {
                 percentageOfHoursWorked = totalHourWorked / 160;
-                totalBonusAmount = double.Parse(TotalMonthlySalesText.Text) * 0.02;
+                totalBonusAmount = totalMonthlySales * 0.02;
                 saleBonus = totalBonusAmount * percentageOfHoursWorked;
-            }
-            else {
-                MessageBox.Show("Total Hours Worked must be 0-160");
+                SalesBonusText.Text = saleBonus.ToString();
             }
             
         }
@@ -65,48 +74,36 @@ namespace MailOrder
             TotalHoursWorkedText.Clear();
             SalesBonusText.Clear();
         }
-
-        private void EnglishButton_CheckedChanged(object sender, EventArgs e)
+        //This method will change all the labels to English version
+        private void EnglishButton_Click(object sender, EventArgs e)
         {
-            Dictionary<String, String> englishLabel = new Dictionary<String, String>();
-            englishLabel.Add("EmployeeIdLabel", "Employee Id");
-            englishLabel.Add("EmployeeNameLabel", "Employee Name");
-            englishLabel.Add("TotalHoursWorkedLabel", "Total Hours Worked");
-            englishLabel.Add("TotalMonthlySalesLabel", "Total Store's Monthly Sale");
-            englishLabel.Add("SalesBonusLabel", "Monthly Sales Bonus");
-            englishLabel.Add("CalculateButton", "Calculate");
-            englishLabel.Add("NextButton", "Next");
-            englishLabel.Add("PrintButton", "Print");
-            englishLabel.Add("LanguageBox", "Language");
-            englishLabel.Add("EnglishButton", "English");
-            languageChange(englishLabel);
+            this.EmployeeIdLabel.Text = Properties.Resources.E_EmployeeId;
+            this.EmployeeNameLabel.Text = Properties.Resources.E_EmployeeName;
+            this.TotalHoursWorkedLabel.Text = Properties.Resources.E_TotalHoursWorked;
+            this.TotalMonthlySalesLabel.Text = Properties.Resources.E_TotalMonthlySales;
+            this.SalesBonusLabel.Text = Properties.Resources.E_SalesBonus;
+            this.CalculateButton.Text = Properties.Resources.E_Calculate;
+            this.NextButton.Text = Properties.Resources.E_Next;
+            this.PrintButton.Text = Properties.Resources.E_Print;
+            this.EnglishButton.Text = Properties.Resources.E_English;
+            this.FrenchButton.Text = Properties.Resources.E_French;
+            this.LanguageBox.Text = Properties.Resources.E_Language;
         }
 
-        private void FrenchButton_CheckedChanged(object sender, EventArgs e)
+        //This method will change all the labels to French version
+        private void FrenchButton_Click(object sender, EventArgs e)
         {
-            Dictionary<String, String> frenchLabel = new Dictionary<String, String>();
-            frenchLabel.Add("EmployeeIdLabel", "Id de l’employé");
-            frenchLabel.Add("EmployeeNameLabel", "Nom de l’employé");
-            frenchLabel.Add("TotalHoursWorkedLabel", "Total d’heures travaillées");
-            frenchLabel.Add("TotalMonthlySalesLabel", "Vente mensuelle du total magasin");
-            frenchLabel.Add("SalesBonusLabel", "Prime mensuelle à la vente");
-            frenchLabel.Add("CalculateButton", "Calculer");
-            frenchLabel.Add("NextButton", "Prochaine");
-            frenchLabel.Add("PrintButton", "Imprimer");
-            frenchLabel.Add("LanguageBox", "Langue");
-            frenchLabel.Add("EnglishButton", "Anglais");
-            languageChange(frenchLabel);
+            this.EmployeeIdLabel.Text = Properties.Resources.F_EmployeeId;
+            this.EmployeeNameLabel.Text = Properties.Resources.F_EmployeeName;
+            this.TotalHoursWorkedLabel.Text = Properties.Resources.F_TotalHoursWorked;
+            this.TotalMonthlySalesLabel.Text = Properties.Resources.F_TotalMonthlySales;
+            this.SalesBonusLabel.Text = Properties.Resources.F_SalesBonus;
+            this.CalculateButton.Text = Properties.Resources.F_Calculate;
+            this.NextButton.Text = Properties.Resources.F_Next;
+            this.PrintButton.Text = Properties.Resources.F_Print;
+            this.EnglishButton.Text = Properties.Resources.F_English;
+            this.FrenchButton.Text = Properties.Resources.E_French;
+            this.LanguageBox.Text = Properties.Resources.F_Language;
         }
-
-        private void languageChange(Dictionary<String, String> labelName) {
-
-            foreach (KeyValuePair<string, string> entry in labelName)
-            {
-                //((Control)entry.Key).Text = entry.Value;
-                // do something with entry.Value or entry.Key
-            }
-
-        }
-
     }
 }
